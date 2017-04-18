@@ -45,6 +45,10 @@ post "/signup" do
   redirect "/"
 end
 
+get "/login" do 
+  erb(:signin)
+end
+
 post "/login" do
   if userTable.has_key?(params[:username])
     user = userTable[params[:username]]
